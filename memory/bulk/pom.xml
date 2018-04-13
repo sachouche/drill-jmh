@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.apache.drill.jmh</groupId>
+    <artifactId>memory</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <groupId>org.apache.drill.jmh.memory</groupId>
+  <artifactId>drill-jmh-memory-bulk</artifactId>
+  <packaging>jar</packaging>
+
+  <name>Apache Drill JMH Bulk Memory Tests</name>
+
+  <properties>
+    <benchmark.mainClass>com.drill.jmh.memory.BulkMemoryAccessBenchmark</benchmark.mainClass>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.drill.jmh</groupId>
+      <artifactId>drill-jmh-common</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
